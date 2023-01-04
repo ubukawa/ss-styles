@@ -1,18 +1,16 @@
 {
- "version":8,
- "sources":{
-     "unmiss": {
-            "type": "raster",
-            "tiles": ["https://pro-ags1.dfs.un.org/arcgis/rest/services/UNMISS_Custom_Basemap_CVW/MapServer/tile/{z}/{y}/{x}"],
-            "attribution": "UNMISS Basemap (for testing)",
-            "tileSize": 256
-          }
-    },
-    "layers":[
-       {
-            "id": "UNMISS",
-            "type": "raster",
-            "source": "unmiss"
-          }
-        ]     
+  "version": 8,
+  "sources": {
+    "ras": {
+      "type": "raster",
+      "tiles": [
+        "https://geoservices.un.org/arcgis/rest/services/ClearMap_WebPlain/MapServer/tile/{z}/{y}/{x}"
+      ],
+      "minzoom": 0,
+      "maxzoom": 6
+    }
+  },
+  "layers": [
+      {"id": "test", "type": "raster", "source": "ras"}
+  ]
 }
